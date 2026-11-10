@@ -1,0 +1,14 @@
+[project]
+name = "desafio-do-semaforo"
+version = "1.0.0"
+description = "Jogo de feira: você contra uma IA (Q-learning) controlando um semáforo."
+requires-python = ">=3.10"
+dependencies = ["pygame>=2.5"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["testes"]
+pythonpath = ["."]
+markers = ["lento: treino completo (alguns segundos); pule com -m 'not lento'"]
