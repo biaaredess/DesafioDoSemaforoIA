@@ -32,27 +32,6 @@ No Windows, use `.venv\Scripts\python main.py`.
 5. **Como a IA pensa**: os três passos, o código do Q-learning e o "cérebro"
    (tabela Q) que a IA preencheu sozinha.
 
-## Visual
-
-Modo escuro com o fundo da mesma cor do asfalto, e o conceito de **placas e pintura de rua**: os blocos da interface são placas de
-cantos chanfrados com um filete interno, como placas de trânsito. As cores do semáforo são as cores
-de identidade de cada participante: vermelho = semáforo comum, amarelo = você, verde = IA.
-Os botões são sempre pintados com essas cores (desativados, ficam só mais apagados); os tempos de cada
-participante ficam em placas brancas com a borda da cor.
-Tipografia: [Bungee](https://fonts.google.com/specimen/Bungee) (inspirada em letreiros urbanos) para
-título e números, e [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)
-(inspirada em placas de rodovia) para o texto. As duas têm licença OFL e estão em
-`semaforo/interface/recursos/fontes/`.
-
-**Resolução:** o layout é pensado em coordenadas lógicas de 1280×720, mas tudo é desenhado nos
-pixels reais da janela (`interface/tela.py`): fontes, carros, semáforos e cenário são gerados já no
-tamanho final, então a tela cheia de 1920×1080 (ou 4K) fica nítida. Redimensionar a janela também
-redesenha tudo na nova resolução.
-
-O cenário tem a largura da janela. Com o painel aberto, a câmera mostra só o cruzamento; na rodada
-de quem joga, ela se abre até as bordas: aparecem as passarelas sobre a rua Leste–Oeste e a fila de
-carros que ainda não chegou ao cruzamento.
-
 ## Arquitetura
 
 O projeto é orientado a objetos e separado em camadas. Cada camada só depende das de baixo,
